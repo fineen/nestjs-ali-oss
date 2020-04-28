@@ -1,0 +1,47 @@
+{
+  "name": "nestjs-ali-oss",
+  "version": "1.0.0",
+  "description": "Nest.js module for aliyun oss service",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fineen/nestjs-ali-oss"
+  },
+  "author": "Fineen Chen",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint \"lib/**/*.ts\" --fix",
+    "format": "prettier \"lib/**/*.ts\" --write",
+    "build": "rm -rf dist && tsc -p tsconfig.json",
+    "precommit": "lint-staged",
+    "prepublish:npm": "npm run build",
+    "publish:npm": "npm publish --access public"
+  },
+  "peerDependencies": {
+    "ali-oss": "^6.0.0",
+    "@nestjs/common": "^6.0.0 || ^7.0.0",
+    "rxjs": "^6.2.1"
+  },
+  "devDependencies": {
+    "@nestjs/common": "^7.0.9",
+    "@types/ali-oss": "^6.0.5",
+    "@types/node": "13.13.4",
+    "@typescript-eslint/eslint-plugin": "2.30.0",
+    "@typescript-eslint/parser": "2.30.0",
+    "ali-oss": "^6.7.0",
+    "eslint": "6.8.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.20.2",
+    "husky": "4.2.5",
+    "lint-staged": "10.1.7",
+    "prettier": "2.0.5",
+    "reflect-metadata": "^0.1.12",
+    "rxjs": "6.5.5",
+    "rxjs-compat": "6.5.5",
+    "typescript": "3.8.3"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write"
+    ]
+  }
+}
